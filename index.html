@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="Logo de la aplicación">
+    </header>
+    <main>
+        <section class="texto-crudo">
+            <form>                        
+                <textarea id="texto" class="input-texto" oninput="this.value = this.value.toLowerCase().replace(/[^a-z\s]/g, '')" placeholder="Ingrese el texto aqui" required></textarea>
+
+                <label for="texto"><img src="img/exclamation-circle.svg" alt="imagen de advertencia" class="exclamacion">Solo letras minúsculas y sin acentos</label>
+
+                <fieldset>
+                    <input type="button" onclick="encriptar();" value="Encriptar" class="boton1">
+                    <input type="button" onclick="desencriptar();" value="Desencriptar" class="boton2">
+                </fieldset>           
+            </form>
+        </section>
+
+        <section class="texto-procesado">
+            <div id="sin" class="sin-mensaje">
+                <img class="muneco" src="img/Muñeco.png" alt="Imagen de ningún texto ingresado">
+                <p><strong>Ningún mensaje fue
+                    encontrado</strong></p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div id="con" class="con-mensaje" style="display: none;">
+                <div class="mensaje-resultado">
+                    <p id="resultado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.
+                    </p>
+                </div>
+                <input type="button" id="btn-copiar" class="boton2" onclick="copiarTexto();" value="Copiar">
+            </div>
+        </section>                    
+    </main>
+    <footer>
+        <p class="copyright">&copy Copyright Josué Francisco Poot Pool</p>        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
