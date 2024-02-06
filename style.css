@@ -121,6 +121,7 @@ fieldset{
 .mensaje-resultado{
     height: 90%;
     overflow: auto;
+    hyphens: auto;
 }
 
 .mensaje-resultado p{
