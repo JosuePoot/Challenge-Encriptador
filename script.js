@@ -4,11 +4,9 @@ let mensajeResultante;
 function encriptar(){
     estadosIniciales();
     mensaje = document.getElementById('texto').value;
-   
     if(mensaje != ""){
-         estadosConMensaje();
+        estadosConMensaje();
         mensaje.split("").forEach(letra => {
-            //(letra === "e") ? mensajeResultante += "enter" : letra;
             if(letra === "e"){
                 mensajeResultante += "enter";
             } else if (letra === "i"){
@@ -22,35 +20,27 @@ function encriptar(){
             } else{
                 mensajeResultante += letra;
             };
-            console.log(typeof letra);
             asignarTextoElemento("#resultado", mensajeResultante);
-        });        
-
+        });
     } else{
-                estadosSinMensaje();
-    }
-    console.log(mensajeResultante);
+        estadosSinMensaje();
+    };
 };
 
 function desencriptar(){
     estadosIniciales();
     mensaje = document.getElementById('texto').value;
-    console.log(mensaje);
-
     if(mensaje != ""){
         estadosConMensaje();
-
         mensajeResultante = remplazoEnTexto(mensaje, "enter", "e");
         mensajeResultante = remplazoEnTexto(mensajeResultante, "imes", "i");
         mensajeResultante = remplazoEnTexto(mensajeResultante, "ai", "a");
         mensajeResultante = remplazoEnTexto(mensajeResultante, "ober", "o");
         mensajeResultante = remplazoEnTexto(mensajeResultante, "ufat", "u");
-        //alert(mensajeResultante);
         asignarTextoElemento("#resultado", mensajeResultante);
     } else{
-                estadosSinMensaje();
-    }
-    console.log(mensajeResultante);
+        estadosSinMensaje();
+    };
 };
 
 function remplazoEnTexto(mensaje, texto, remplazo){
@@ -73,6 +63,7 @@ function estadosSinMensaje(){
 
 function estadosIniciales(){
     mensajeResultante = "";
+    estadosSinMensaje();
 };
 
 function copiarTexto(){

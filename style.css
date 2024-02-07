@@ -9,19 +9,18 @@ header{
 }
 
 .texto-crudo{
-    padding: 32px;
+    padding: 80px;
+    padding-bottom: 32px;
     box-sizing: border-box;
-    width: calc(100% - 400px);
-    height: calc(1024px - 128px);
+    /*width: calc(100% - 400px);*/
+    width: 70.55555555%;
+    height: calc(100vh - 128px);
 }
 
 .texto-crudo form{
-    margin: 0 48px 0 168px;
+    margin-left: 120px;
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
     height: 100%;
 }
 
@@ -51,7 +50,7 @@ label{
 
 .exclamacion{
     margin-right: 8px;
-    color: #495057;
+    color: #65747D;
     height: 16px;
     width: 16px;
 }
@@ -60,17 +59,40 @@ fieldset{
     display: flex;
     flex-wrap: nowrap;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .boton1{
     width: 328px;
-    background: #0A3871;
+    background-color: #0A3871;
     color: white;
     height: 67px;
     border: 1px solid #0A3871;
     border-radius: 20px;
     font-size: 16px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton1:hover{
+    background-color: #072B61;
+}
+
+.boton2{
+    margin-left: 24px;
+    background-color: white;
+    color: #0A3871;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton2:hover{
+    background-color: #EFF1FA;
+}
+
+.boton3{
+    margin: 0;
+    width: 336px;
 }
 
 .texto-procesado{
@@ -79,8 +101,10 @@ fieldset{
     right: 0;
     margin: 40px;
     font-size: 16px;
-    width: 400px;
-    height: 944px;
+    /*width: 400px;*/
+    width: 27.77777777%;
+    /*height: 944px;*/
+    height: calc(100vh - 80px);
     padding:  32px;
     border-radius: 20px;
     background-color: white;
@@ -110,16 +134,18 @@ fieldset{
 
 .con-mensaje{
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
     width: 100%;
     height: 100%;
     font-size: 24px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .mensaje-resultado{
-    height: 90%;
+    width: 100%;
+    height: calc(100% - 99px);
     overflow: auto;
     hyphens: auto;
 }
@@ -127,16 +153,6 @@ fieldset{
 .mensaje-resultado p{
     color: #495057;
     font-size: 24px;
-}
-
-.boton2{
-    width: 336px;
-    height: 67px;
-    border: 1px solid #0A3871;
-    border-radius: 20px;
-    background-color: white;
-    color: #0A3871;
-    font-size: 16px;
 }
 
 footer {
