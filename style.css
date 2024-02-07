@@ -189,7 +189,7 @@ footer {
         margin-top: 88px;
     }
 
-    .boton3 {
+    .boton1 {
         width: 100%;
     }
 
@@ -257,8 +257,12 @@ footer {
         flex-direction: column;
     }
 
-    .boton2 {
+    .boton1 {
+        width: 100%;
         margin: 0;
+    }
+
+    .boton2 {
         margin-top: 24px;
     }
 
