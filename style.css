@@ -157,7 +157,6 @@ fieldset{
 }
 
 footer {
-    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -223,7 +222,7 @@ footer {
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:376px) {
     body {
         padding: 0;
     }
