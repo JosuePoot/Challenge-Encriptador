@@ -4,8 +4,9 @@ body{
     padding: 40px;
 }
 
-header{
+header img{
     height: 48px;
+    margin-left: 43px;
 }
 
 .texto-crudo{
@@ -163,3 +164,111 @@ footer {
     background-color: #0A3871; /* Cambia el color según tu diseño */
     padding: 10px;
   }
+
+@media screen and (max-width:768px) {
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 112px;
+    }
+
+    header img{
+        margin: 0;
+    }
+
+    .texto-crudo {
+        padding: 0;
+        width: 100%;
+        /*height: calc(100vh - 477px);*/
+        height: 697px;
+    }
+
+    .texto-crudo form {
+        margin: 0;
+        margin-top: 88px;
+    }
+
+    .boton3 {
+        width: 100%;
+    }
+
+    .texto-procesado {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        margin-top: 64px;
+        height: auto;
+    }
+
+    .sin-mensaje {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        height: 69px;
+    }
+
+    .muneco {
+        display: none;
+    }
+
+    .sin-mensaje p{
+        margin-top: 0;
+    }
+
+    .mensaje-resultado {
+        margin-bottom: 32px;
+        max-height: 100vh;
+    }
+}
+
+@media screen and (max-width:376px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        height: 96px;
+    }
+
+    .logo {
+        margin-left: 16px;
+    }
+
+    main {
+        padding: 40px 16px;
+    }
+
+    .texto-crudo {
+        height: 491px;
+    }
+
+    .texto-crudo form {
+        margin-top: 16px;
+    }
+
+    fieldset {
+        display: flex;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .boton2 {
+        margin: 0;
+        margin-top: 24px;
+    }
+
+    .boton3 {
+        margin: 0;
+    }
+
+    .texto-procesado {
+        min-height: 186px;
+    }
+
+
+}
