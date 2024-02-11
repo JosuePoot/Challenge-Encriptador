@@ -17,9 +17,9 @@
     <main>
         <section class="texto-crudo">
             <form>                        
-                <textarea id="texto" class="input-texto" oninput="this.value = this.value.toLowerCase().replace(/[^a-z\s]/g, '')" placeholder="Ingrese el texto aqui" required></textarea>
+                <textarea id="texto" class="input-texto" oninput="limpiarTexto();" placeholder="Ingrese el texto aqui" required></textarea>
 
-                <label for="texto"><img src="img/exclamation-circle.svg" alt="imagen de advertencia" class="exclamacion">Solo letras minúsculas y sin acentos</label>
+                <label for="texto" id="advertencia"><img src="img/exclamation-circle.svg" alt="imagen de advertencia" class="exclamacion">Solo letras minúsculas y sin acentos</label>
 
                 <fieldset>
                     <input type="button" onclick="encriptar();" value="Encriptar" class="boton1">
