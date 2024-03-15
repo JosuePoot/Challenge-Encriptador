@@ -1,24 +1,42 @@
+:root {
+    --height-header:128px;
+    --height-main:calc(100vh - var(--height-header));    
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Inter', sans-serif;
     background-color: #F3F5FC;
-    padding: 40px;
 }
 
-header img{
+header{
+    padding: 40px;
+    height: var(--height-header);
+}
+
+.logo {
+    width: 32px;
     height: 48px;
-    margin-left: 43px;
+    margin-left: 44px;
+}
+
+main{
+    padding: 40px;
+    height: var(--height-main);
 }
 
 .texto-crudo{
-    padding: 80px;
-    padding-bottom: 32px;
+    padding: 0 80px 32px 40px;
     box-sizing: border-box;
     width: 70.55555555%;
-    height: calc(100vh - 128px);
+    height: 100%;
 }
 
 .texto-crudo form{
-    margin-left: 120px;
+    margin-left: 160px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -63,7 +81,10 @@ fieldset{
 }
 
 .boton1{
-    width: 328px;
+
+    width: 100%;
+    max-width: 328px;
+
     background-color: #0A3871;
     color: white;
     height: 67px;
@@ -157,17 +178,11 @@ footer {
     width: 100%;
     text-align: center;
     background-color: #65747D;
-    padding: 10px;
-    /*
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #0A3871;
-    padding: 10px;*/
+    padding: 40px;
+    box-sizing: border-box;
   }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1300px) {
     header{
         display: flex;
         align-items: center;
@@ -192,6 +207,7 @@ footer {
 
     .boton1 {
         width: 100%;
+        max-width: 100%;
     }
 
     .texto-procesado {
