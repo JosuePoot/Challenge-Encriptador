@@ -1,6 +1,10 @@
 :root {
     --height-header:128px;
-    --height-main:calc(100vh - var(--height-header));    
+    --height-main:calc(100vh - var(--height-header));
+
+    --width-right:27.77777777%;
+    /* --width-left:calc(100% - var(--width-right)); */
+    --width-left:70.5882353%;
 }
 
 * {
@@ -13,6 +17,9 @@ body{
 }
 
 header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding: 40px;
     height: var(--height-header);
 }
@@ -31,7 +38,8 @@ main{
 .texto-crudo{
     padding: 0 80px 32px 40px;
     box-sizing: border-box;
-    width: 70.55555555%;
+    /* width: 70.5882353%; */
+    width: var(--width-left);
     height: 100%;
 }
 
@@ -52,6 +60,9 @@ textarea{
     border: none;
     resize: none;
     background-color: #F3F5FC;
+
+    outline: none; /*Quita el borde de enfoque predeterminado */
+    /* outline-color: #65747D; */
 }
 
 textarea::placeholder{
@@ -122,7 +133,8 @@ fieldset{
     right: 0;
     margin: 40px;
     font-size: 16px;
-    width: 27.77777777%;
+    /* width: 27.77777777%; */
+    width: var(--width-right);
     height: calc(100vh - 80px);
     padding:  32px;
     border-radius: 20px;
@@ -183,26 +195,29 @@ footer {
   }
 
 @media screen and (max-width:1300px) {
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        height: 112px;
+    :root {
+        --height-header:200px;
     }
 
-    header img{
+    .logo {
         margin: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .texto-crudo {
         padding: 0;
         width: 100%;
-        height: 697px;
+        /* height: 697px; */
+        height: 77.96420581655481%;
     }
 
     .texto-crudo form {
         margin: 0;
-        margin-top: 88px;
     }
 
     .boton1 {
@@ -214,8 +229,8 @@ footer {
         position: relative;
         width: 100%;
         margin: 0;
-        margin-top: 64px;
-        height: auto;
+        /* height: auto; */
+        height: 14.87695749440716%;
     }
 
     .sin-mensaje {
